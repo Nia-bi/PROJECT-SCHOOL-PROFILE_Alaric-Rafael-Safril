@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- KOMENTAR: Judul halaman web yang tampil di tab browser -->
+<title>Profil SMPN 14 TANGERANG SELATAN</title>
+
+
+<style>
+/* ========================================================== */
+/* PENGATURAN TEMA WARNA WEBSITE                              */
+/* ========================================================== */
+:root {
+ --warna-header: #116de6e1;      /* Warna latar judul & bagian header/footer */
+ --warna-teks-header: #ffffff; /* Warna tulisan di bagian header */
+ --warna-tombol: #ff005d;      /* Warna tombol aksi (CTA) */
+ --warna-latar: #f9f2c6;       /* Warna latar belakang halaman web */
+}
+
+
+/* ===== PENGATURAN DASAR TAMPILAN ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+ font-family: Arial, sans-serif;
+ background: var(--warna-latar);
+ color: #ffefd1;
+ line-height: 1.6;
+}
+
+
+/* ===== HEADER (BAGIAN UTAMA PALING ATAS) ===== */
+header {
+ background: var(--warna-header);
+ color: var(--warna-teks-header);
+ text-align: center;
+ padding: 70px 20px 50px 20px;
+}
+
+
+/* PENGATURAN UKURAN & BENTUK LOGO SEKOLAH */
+.logo-sekolah {
+ width: 90px;
+ height: 90px;
+ object-fit: cover;
+ border-radius: 50%; /* Membuat foto menjadi bulat */
+ border: 3px solid rgb(97, 81, 81);
+ margin-bottom: 15px;
+}
+header h1 { font-size: 2.3rem; margin-bottom: 10px; }
+header p { font-size: 1.1rem; margin-bottom: 15px; }
+
+
+/* ===== TOMBOL AKSI (CTA BUTTON) ===== */
+.tombol {
+ display: inline-block;
+ background: var(--warna-tombol);
+ color: #ffffff;
+ padding: 12px 30px;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: bold;
+ font-size: 1.1rem;
+}
+.tombol:hover { transform: scale(1.06); } /* Efek membesar saat kursor diarahkan */
+
+
+/* ===== PENGATURAN KOTAK / KONTAINER UTAMA ===== */
+.kontainer { max-width: 1000px; margin: 0 auto; padding: 45px 20px; }
+h2 {
+ color: var(--warna-header);
+ text-align: center;
+ font-size: 2rem;
+ margin-bottom: 25px;
+}
+.kartu {
+ background: #674f4f;
+ border-radius: 16px;
+ padding: 25px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Efek bayangan kotak */
+}
+.grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 20px;
+}
+.ekskul { text-align: center; font-weight: bold; font-size: 1.1rem; }
+.ekskul span { display: block; font-size: 2.2rem; margin-bottom: 6px; }
+
+
+/* ===== PENGATURAN GAMBAR / FOTO DI DALAM GRID ===== */
+.grid img {
+ width: 100%;
+ height: 180px;
+ object-fit: cover;
+ border-radius: 12px;
+ margin-bottom: 10px;
+}
+
+
+/* ===== KOTAK THUMBNAIL VIDEO DENGAN TOMBOL PLAY ===== */
+.video-thumbnail-container {
+ position: relative;
+ width: 100%;
+ max-width: 700px;
+ margin: 0 auto;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.video-thumbnail-container img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+.overlay-play {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.35);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transition: background 0.3s ease;
+ text-decoration: none;
+}
+.overlay-play:hover {
+ background: rgba(0, 0, 0, 0.5);
+}
+.ikon-play {
+ width: 75px;
+ height: 75px;
+ background: #714b48;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+ font-size: 32px;
+ padding-left: 5px; /* Sedikit menggeser ikon segitiga agar pas di tengah */
+ box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+ transition: transform 0.3s ease;
+}
+.overlay-play:hover .ikon-play {
+ transform: scale(1.15);
+}
+.teks-play {
+ color: white;
+ font-weight: bold;
+ font-size: 1.1rem;
+ margin-top: 15px;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+
+/* ===== BAGIAN FOOTER (BAWAH HALAMAN) ===== */
+footer {
+ background: var(--warna-header);
+ color: var(--warna-teks-header);
+ text-align: center;
+ padding: 25px 20px;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 1: HEADER, LOGO, & IDENTITAS SEKOLAH                -->
+<!-- ========================================================== -->
+<header>
+ <!--
+   CARA MENGGANTI FOTO/LOGO DARI KOMPUTER LOKAL:
+   1. Simpan file gambar logo di folder yang SAMA dengan file HTML ini.
+   2. Ganti 'logo smp.jpeg' dengan nama file logo Anda, misal: src="logo-bima.png"
+ -->
+ <img src="logo smp.jpeg" alt="Logo SMPN 14 TANGERANG SELATAN" class="logo-sekolah">
+  <h1>SMPN 14 TANGERANG SELATAN</h1>
+ <p>Insan Cerdas, Berkarakter, dan Berbudaya Lingkungan</p>
+ <p style="font-size: 0.95rem; opacity: 0.9;">📍 Jl. AMD No. 15-16, Kelurahan Pondok Kacang Barat, Kota Tangerang Selatan</p>
+  <br>
+ <a class="tombol" href="#profil">Jelajahi Profil</a>
+</header>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 2: TENTANG SEKOLAH, PROFIL, & VISI MISI            -->
+<!-- ========================================================== -->
+<div class="kontainer" id="profil">
+ <h2>Tentang Sekolah Kami</h2>
+ <div class="kartu">
+   <p><strong>Profil Singkat:</strong> Berpedoman pada visi  “Insan Cerdas, Berkarakter, dan Berbudaya Lingkungan", serta misi sekolah yang dijadikan landasan dalam  menentukan tujuan dan kebijakan sekolah, SMP Negeri 14 Tangerang Selatan selalu berkembang menjawab tantangan zaman. Hal ini tercermin dari program-program dan kegiatan sekolah, sehingga mencetak generasi-generasi unggul dan handal.
+  </p>
+   <br>
+   <p><strong>Visi Sekolah:</strong> “CERIA” (Cerdas, Empati, Religius, Inovatif, dan Aktif), dengan mengusung prinsip utama “adab dulu, ilmu mengikuti”.</p>
+   <br>
+   <p><strong>Misi Sekolah:</strong></p>
+   <ul style="margin-left: 20px; margin-top: 5px;">
+     <li>Menerapkan lingkungan belajar yang kondusif, aman, serta bebas kekerasan melalui keterlibatan Duta BSAN dari perwakilan siswa.</li>
+     <li> Mengembangkan kesadaran cinta lingkungan sejak dini melalui aksi nyata pelestarian alam dan kebersihan sekolah.</li>
+     <li>Mengalokasikan waktu khusus untuk interaksi positif antar-rombongan belajar guna membangun empati dan mencegah konflik.</li>
+   </ul>
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 3: COVER VIDEO YOUTUBE DENGAN TOMBOL PLAY KUSTOM    -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Video Profil Sekolah</h2>
+ <div class="kartu">
+  
+   <!-- Tampilan Cover Depan Thumbnail Video YouTube Terlihat Jelas -->
+   <div class="video-thumbnail-container">
+     <!-- Gambar diambil otomatis dari thumbnail video YouTube -->
+     <img src="https://img.youtube.com/vi/MZjVTh_52TY/hqdefault.jpg" alt="Cover Video Profil SMK Bina Informatika">
+    
+     <!-- Tombol Play di atas gambar yang langsung mengarah ke video YouTube -->
+     <a href="https://www.youtube.com/watch?v=MZjVTh_52TY" target="_blank" class="overlay-play">
+       <div class="ikon-play">▶</div>
+       <div class="teks-play">▶ Tonton Video Profil SMPN 14 TANGERANG SELATAN</div>
+     </a>
+   </div>
+
+
+   <p style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 15px;">
+     Klik pada gambar di atas untuk menyaksikan video profil lengkap fasilitas dan kegiatan belajar di sekolah.
+   </p>
+
+
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 4: FOTO & INFORMASI EKSTRAKURIKULER                 -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Ekstrakurikuler Pilihan</h2>
+ <div class="grid">
+  
+   <!-- Ekskul 1 -->
+   <div class="kartu ekskul">
+     <img src="ekskul-futsal" alt="Foto Coding Club">
+     <span>⚽</span> Futsal
+     <p style="font-size: 0.9rem; font-weight: normal; color: #ffffff; margin-top: 8px;">berguna untuk mengembangkan keterampilan olahraga, membentuk karakter disiplin dan kerja sama tim, serta menjaga kebugaran fisik siswa.</p>
+   </div>
+
+
+   <!-- Ekskul 2 -->
+   <div class="kartu ekskul">
+     <img src="basket.jpg" alt="Foto Multimedia">
+     <span>🏀</span> Basket
+     <p style="font-size: 0.9rem; font-weight: normal; color: #ffffff; margin-top: 8px;">berguna untuk mengembangkan keterampilan olahraga, membentuk karakter disiplin dan kerja sama tim, serta menjaga kebugaran fisik siswa.</p>
+   </div>
+
+
+   <!-- Ekskul 3 -->
+   <div class="kartu ekskul">
+     <img src="volly.jpg" alt="Foto Olahraga">
+     <span>🏐</span> VolleyBall
+     <p style="font-size: 0.9rem; font-weight: normal; color: #ffffff; margin-top: 8px;">berguna untuk mengembangkan keterampilan olahraga, membentuk karakter disiplin dan kerja sama tim, serta menjaga kebugaran fisik siswa.</p>
+   </div>
+
+
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 5: FOTO & INFORMASI LOMBA / PRESTASI                -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Galeri Lomba & Prestasi</h2>
+ <div class="grid">
+  
+   <!-- Prestasi 1 -->
+   <div class="kartu">
+     <img src="piala.webp" alt="Foto Lomba 1">
+     <h3 style="font-size: 1.1rem; color: var(--warna-header); margin-bottom: 5px;">🏆 Juara Lomba Kompetensi Siswa (LKS)</h3>
+     <p style="font-size: 0.9rem; color: #ffffff;">Prestasi gemilang siswa kejuruan dalam bidang olahraga.</p>
+   </div>
+
+
+   <!-- Prestasi 2 -->
+   <div class="kartu">
+     <img src="lukisan.jpg" alt="Foto Lomba 2">
+     <h3 style="font-size: 1.1rem; color: var(--warna-header); margin-bottom: 5px;">🌟 Pameran Produk Kreatif & Kewirausahaan</h3>
+     <p style="font-size: 0.9rem; color: #ffffff;">Hasil karya lukisan siswa siswi Smpn 14 Tangerang Selatan.</p>
+   </div>
+
+
+ </div>
+</div>
+
+
+<!-- ========================================================== -->
+<!-- BAGIAN 6: FOOTER (BAGIAN BAWAH WEBSITE)                    -->
+<!-- ========================================================== -->
+<footer>
+ <p>&copy; 2026 SMPN 14 TANGERANG SELATAN · Dibuat oleh: [Alaric Rafael Safril]</p>
+</footer>
+
+
+</body>
+</html>
